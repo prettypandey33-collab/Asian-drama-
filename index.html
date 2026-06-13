@@ -3,22 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Cute Drama | Honest K-Drama & C-Drama Reviews, Latest Updates & Recommendations</title>
-    <meta name="description" content="Your ultimate destination for K-Drama and C-Drama reviews, latest updates, top lists, and honest recommendations. Read reviews of Lovely Runner, Hidden Love, Joy of Life and more.">
-    <meta name="keywords" content="K-Drama reviews, C-Drama reviews, Lovely Runner, Hidden Love, Joy of Life, Queen of Tears, The Double, drama recommendations">
-    <meta name="author" content="Cute Drama">
+    <title>CpopZone | Asian Drama Reviews, Episode Guide & News</title>
+    <meta name="description" content="CpopZone - your ultimate entertainment hub for K-Drama, C-Drama, J-Drama reviews, episode breakdowns, latest news and community love. Discover, review, and track dramas.">
+    <meta name="keywords" content="Asian drama, K-Drama reviews, C-Drama episodes, drama tags, entertainment, cpop, cdrama, kdrama">
+    <meta name="author" content="CpopZone">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.cutedrama.com/">
-    <meta property="og:title" content="Cute Drama – Drama Reviews & More">
-    <meta property="og:description" content="Honest reviews, latest updates & top drama recommendations for K-Drama & C-Drama lovers.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.cutedrama.com/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <!-- Monetag meta tag (provided) -->
     <meta name="monetag" content="108d8db24e0e226aa3ccf7171323173b">
     
-    <!-- Google Fonts & Font Awesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <!-- Google Fonts + Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     <style>
@@ -29,524 +22,521 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background: #fef7f0;
-            color: #2c241a;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: #faf7f2;
+            color: #1e1a15;
             line-height: 1.5;
         }
 
         .container {
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 28px;
         }
 
         /* header */
-        .site-header {
-            background: linear-gradient(135deg, #fff1e6 0%, #ffe6d5 100%);
-            padding: 2rem 0 1.5rem;
-            border-bottom: 1px solid #ffdbc4;
-            text-align: center;
+        .main-header {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+            border-bottom: 1px solid #f0e2d4;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 250, 245, 0.98);
+            backdrop-filter: blur(6px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            flex-wrap: wrap;
         }
 
         .logo h1 {
-            font-size: 2.8rem;
+            font-size: 1.9rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #e85d04, #ff9500);
+            background: linear-gradient(135deg, #dd6b20, #f59e0b);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
         }
 
-        .logo p {
-            font-size: 1rem;
-            color: #b45f2b;
+        .logo span {
+            font-size: 0.8rem;
             font-weight: 500;
+            color: #c57f3e;
+            display: block;
         }
 
-        .hero {
-            text-align: center;
-            margin: 2rem 0 1.5rem;
-        }
-
-        .hero h2 {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #331e0f;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: #5e3a22;
-            margin-top: 0.5rem;
-        }
-
-        .btn-explore {
-            display: inline-block;
-            margin-top: 1.2rem;
-            background: #ff8c42;
-            color: white;
-            font-weight: 600;
-            padding: 0.8rem 2rem;
-            border-radius: 40px;
+        .nav-links a {
+            margin-left: 28px;
             text-decoration: none;
+            font-weight: 600;
+            color: #3f2e1f;
             transition: 0.2s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
-        .btn-explore:hover {
-            background: #e56b1a;
-            transform: translateY(-2px);
+        .btn-create {
+            background: #f59e0b;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 40px;
+            margin-left: 20px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
         }
 
-        /* ad banner top */
-        .ad-banner {
-            background: #fff;
-            margin: 20px 0;
+        /* hero */
+        .hero-banner {
+            background: linear-gradient(120deg, #fff1e2, #ffe6d5);
+            border-radius: 48px;
+            margin: 32px 0;
+            padding: 48px 32px;
             text-align: center;
-            border-radius: 20px;
+        }
+
+        /* ad top */
+        .ad-top {
+            background: #fff;
+            border-radius: 28px;
+            margin: 20px 0;
             padding: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            text-align: center;
             border: 1px solid #ffe0cc;
         }
 
-        /* two column layout */
-        .main-grid {
+        /* layout */
+        .two-columns {
             display: grid;
-            grid-template-columns: 1fr 320px;
+            grid-template-columns: 1fr 340px;
             gap: 40px;
-            margin: 2rem 0;
+            margin: 40px 0;
         }
 
-        /* cards */
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            border-left: 6px solid #ff8c42;
-            padding-left: 16px;
+        /* posts grid */
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 28px;
         }
 
-        .review-card {
+        .post-card {
             background: white;
-            border-radius: 28px;
+            border-radius: 32px;
             overflow: hidden;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
-            margin-bottom: 2rem;
-            transition: 0.2s;
-            border: 1px solid #ffe1ce;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.04);
+            transition: all 0.25s ease;
+            border: 1px solid #f1e2d3;
+            display: flex;
+            flex-direction: column;
         }
 
-        .review-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+        .post-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 36px rgba(0, 0, 0, 0.08);
+        }
+
+        .card-img {
+            height: 210px;
+            background: #f7ede3;
+            overflow: hidden;
         }
 
         .card-img img {
             width: 100%;
-            height: 220px;
+            height: 100%;
             object-fit: cover;
-            display: block;
+            transition: 0.2s;
         }
 
-        .card-content {
-            padding: 1.5rem;
+        .card-body {
+            padding: 1.4rem;
+            flex: 1;
         }
 
-        .drama-tag {
+        .cat-badge {
             display: inline-block;
-            background: #ffedd5;
-            color: #b45f2b;
-            font-weight: 600;
-            font-size: 0.75rem;
+            background: #fdebd0;
+            color: #bc6f2c;
+            font-size: 0.7rem;
+            font-weight: 700;
             padding: 4px 12px;
-            border-radius: 30px;
+            border-radius: 40px;
             margin-bottom: 12px;
         }
 
-        .card-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+        .post-title {
+            font-size: 1.35rem;
             font-weight: 700;
+            margin-bottom: 8px;
         }
 
-        .meta {
-            color: #8b6b4d;
-            font-size: 0.85rem;
-            margin: 12px 0;
+        .post-tags {
             display: flex;
-            gap: 16px;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0;
         }
 
-        .read-more {
-            color: #ff8c42;
+        .tag {
+            background: #f5ede5;
+            font-size: 0.7rem;
+            padding: 4px 10px;
+            border-radius: 30px;
+            color: #8a5a33;
+        }
+
+        .btn-detail {
+            background: none;
+            border: 1px solid #f0c49a;
+            padding: 8px 16px;
+            border-radius: 40px;
             font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 8px;
+            margin-top: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
         }
 
-        /* incontent ad */
-        .incontent-ad {
-            background: #fcf7f0;
-            text-align: center;
-            padding: 20px;
-            margin: 20px 0 32px;
-            border-radius: 28px;
-            border: 1px dashed #ffbc7a;
+        .btn-detail:hover {
+            background: #ffedd5;
         }
 
-        /* sidebar */
-        .sidebar-card {
+        /* sidebar cards */
+        .sidebar-widget {
             background: white;
             border-radius: 28px;
-            padding: 1.4rem;
+            padding: 1.6rem;
             margin-bottom: 2rem;
-            border: 1px solid #ffe0cc;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+            border: 1px solid #f0e0d0;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
         }
 
-        .sidebar-title {
+        .widget-title {
             font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            padding-bottom: 8px;
-            border-bottom: 3px solid #ffc489;
+            border-left: 5px solid #f59e0b;
+            padding-left: 14px;
+            margin-bottom: 18px;
         }
 
-        .trending-list, .popular-list {
-            list-style: none;
-        }
-
-        .trending-list li, .popular-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid #fff0e4;
+        .category-list, .tag-cloud {
             display: flex;
-            align-items: center;
-            gap: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .category-item, .tag-cloud span {
+            background: #f4e9e0;
+            padding: 6px 16px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.1s;
+        }
+
+        .recent-list li {
+            list-style: none;
+            padding: 10px 0;
+            border-bottom: 1px solid #f0e2d4;
+            cursor: pointer;
             font-weight: 500;
         }
 
-        .trending-list li span:first-child, .popular-list li span:first-child {
-            background: #ffedd5;
-            width: 28px;
-            height: 28px;
-            display: inline-flex;
+        /* detailed view modal / panel */
+        .detail-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 40px;
-            font-weight: bold;
-            color: #c1661b;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.2s;
         }
 
-        .sidebar-ad {
-            margin: 20px 0;
-            text-align: center;
+        .detail-container {
+            background: #fffef7;
+            max-width: 900px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            border-radius: 48px;
+            padding: 28px;
+            position: relative;
         }
 
-        /* footer & newsletter */
-        .newsletter {
-            background: #ffefdd;
-            border-radius: 40px;
-            padding: 2rem;
-            text-align: center;
-            margin: 2rem 0;
+        .close-detail {
+            position: absolute;
+            right: 24px;
+            top: 20px;
+            font-size: 28px;
+            cursor: pointer;
         }
 
-        .newsletter input {
-            padding: 12px 18px;
-            border-radius: 60px;
-            border: none;
-            width: 260px;
-            max-width: 70%;
-            font-size: 1rem;
-            margin-right: 10px;
+        /* form admin */
+        .admin-panel {
             background: white;
+            border-radius: 38px;
+            padding: 28px;
+            margin: 30px 0;
+            border: 2px dashed #ffd7b5;
         }
 
-        .newsletter button {
-            background: #ff8c42;
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 28px;
+            border: 1px solid #e9daca;
+            font-family: inherit;
+        }
+
+        button {
+            background: #f59e0b;
             border: none;
             padding: 12px 24px;
-            border-radius: 60px;
-            font-weight: bold;
+            border-radius: 40px;
+            font-weight: 700;
             color: white;
             cursor: pointer;
         }
 
+        .episode-list {
+            background: #fef6ec;
+            padding: 12px;
+            border-radius: 24px;
+            margin-top: 18px;
+        }
+
+        .episode-item {
+            padding: 6px 0;
+            border-bottom: 1px solid #ffe1c2;
+        }
+
         footer {
-            background: #2c241a;
-            color: #f4e3d3;
-            padding: 2.5rem 0 1.5rem;
-            border-radius: 30px 30px 0 0;
-            margin-top: 2rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 2rem;
-        }
-
-        .footer-col h4 {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .footer-col a {
-            color: #e0c8b0;
-            text-decoration: none;
-            display: block;
-            margin: 6px 0;
-        }
-
-        .copyright {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.8rem;
-            border-top: 1px solid #4a3728;
-            padding-top: 1.5rem;
+            background: #241f1a;
+            color: #e7cfb9;
+            border-radius: 40px 40px 0 0;
+            padding: 40px 0 24px;
+            margin-top: 50px;
         }
 
         @media (max-width: 860px) {
-            .main-grid {
-                grid-template-columns: 1fr;
-            }
-            .container {
-                padding: 0 16px;
-            }
-            .logo h1 {
-                font-size: 2rem;
-            }
-        }
-
-        img[alt*="Lovely Runner"], img[alt*="Hidden Love"], img[alt*="Joy of Life"] {
-            background: #f0e2d4;
+            .two-columns { grid-template-columns: 1fr; }
+            .header-inner { flex-direction: column; gap: 12px; }
         }
     </style>
 </head>
 <body>
 
-<header class="site-header">
-    <div class="container">
+<div class="main-header">
+    <div class="container header-inner">
         <div class="logo">
-            <h1>🐻 Cute Drama</h1>
-            <p>Drama Reviews & More</p>
+            <h1>🎬 CPOP<span style="background:none; color:#df7f2a;">ZONE</span></h1>
+            <span>Drama Reviews · Episodes · Community</span>
         </div>
-        <div class="hero">
-            <h2>Your Ultimate Destination For K-Drama & C-Drama Reviews</h2>
-            <p>Honest Reviews, Latest Updates & Top Drama Recommendations</p>
-            <a href="#" class="btn-explore">Explore Now →</a>
+        <div class="nav-links">
+            <a href="#" id="homeLink">Home</a>
+            <a href="#" id="showCreateBtnNav">➕ New Post</a>
+            <button class="btn-create" id="scrollToFormBtn">✍️ Create Review</button>
         </div>
     </div>
-</header>
+</div>
 
 <div class="container">
-    <!-- Responsive AdSense Banner area (EffectiveCPM) -->
-    <div class="ad-banner">
+    <!-- Top Ad (EffectiveCPM) -->
+    <div class="ad-top">
         <script async="async" data-cfasync="false" src="https://pl29453347.effectivecpmnetwork.com/618d39e8700d3783061510debc2a67ec/invoke.js"></script>
         <div id="container-618d39e8700d3783061510debc2a67ec"></div>
     </div>
 
-    <div class="main-grid">
-        <!-- LEFT COLUMN: Latest Reviews -->
-        <main>
-            <h2 class="section-title">📺 Latest Reviews</h2>
-            
-            <!-- K-DRAMA Card 1: Lovely Runner (with exact same image reference, unchanged) -->
-            <article class="review-card">
-                <div class="card-img">
-                    <img src="images/lovely-runner.jpg" alt="Lovely Runner (2024) K-Drama poster" onerror="this.onerror=null; this.src='https://placehold.co/600x400/ffe6d5/ab6f42?text=Lovely+Runner+Poster';">
-                </div>
-                <div class="card-content">
-                    <span class="drama-tag">🇰🇷 K-DRAMA</span>
-                    <h3>Lovely Runner (2024) – Best Time Travel Romance K-Drama?</h3>
-                    <p>Lovely Runner is a heartwarming time travel romance drama that brings laughter, tears, and nostalgia...</p>
-                    <div class="meta">
-                        <span><i class="far fa-calendar-alt"></i> 📅 May 12, 2024</span>
-                        <span><i class="far fa-comment"></i> 📄 12 Comments</span>
-                    </div>
-                    <a href="#" class="read-more">Read More →</a>
-                </div>
-            </article>
+    <div class="hero-banner">
+        <h2 style="font-size: 2rem;">📺 Your Ultimate Asian Drama Hub</h2>
+        <p style="font-size:1.1rem;">Reviews, episode guides, trailers & internal linking — all in one place</p>
+    </div>
 
-            <!-- C-DRAMA Card 2: Hidden Love -->
-            <article class="review-card">
-                <div class="card-img">
-                    <img src="images/hidden-love.jpg" alt="Hidden Love (2023) C-Drama poster" onerror="this.onerror=null; this.src='https://placehold.co/600x400/fdebd0/b45f2b?text=Hidden+Love+Poster';">
-                </div>
-                <div class="card-content">
-                    <span class="drama-tag">🇨🇳 C-DRAMA</span>
-                    <h3>Hidden Love (2023) – A Sweetest Love Story You'll Adore</h3>
-                    <p>Hidden Love is a beautiful coming-of-age romance that will make your heart melt with every episode...</p>
-                    <div class="meta">
-                        <span><i class="far fa-calendar-alt"></i> 📅 May 10, 2024</span>
-                        <span><i class="far fa-comment"></i> 📄 8 Comments</span>
-                    </div>
-                    <a href="#" class="read-more">Read More →</a>
-                </div>
-            </article>
-
-            <!-- In-Content AdSense Area (468x60 ad) using provided script -->
-            <div class="incontent-ad">
-                <div style="margin-bottom: 6px; font-size:12px; color:#b87a4a;">Advertisement</div>
-                <script>
-                    atOptions = {
-                        'key' : 'a2b41f94bc456c992ffed214e85bd03e',
-                        'format' : 'iframe',
-                        'height' : 60,
-                        'width' : 468,
-                        'params' : {}
-                    };
-                </script>
-                <script src="https://www.highperformanceformat.com/a2b41f94bc456c992ffed214e85bd03e/invoke.js"></script>
-            </div>
-
-            <!-- C-DRAMA Card 3: Joy of Life Season 2 -->
-            <article class="review-card">
-                <div class="card-img">
-                    <img src="images/joy-of-life-season2.jpg" alt="Joy of Life Season 2 (2024) C-Drama poster" onerror="this.onerror=null; this.src='https://placehold.co/600x400/ffefdf/aa6f40?text=Joy+of+Life+S2+Poster';">
-                </div>
-                <div class="card-content">
-                    <span class="drama-tag">🇨🇳 C-DRAMA</span>
-                    <h3>Joy of Life Season 2 (2024) – Worth The Wait?</h3>
-                    <p>After a long wait, Joy of Life Season 2 is finally here! Here’s our full review with all the details...</p>
-                    <div class="meta">
-                        <span><i class="far fa-calendar-alt"></i> 📅 May 8, 2024</span>
-                        <span><i class="far fa-comment"></i> 📄 15 Comments</span>
-                    </div>
-                    <a href="#" class="read-more">Read More →</a>
-                </div>
-            </article>
+    <div class="two-columns">
+        <!-- MAIN CONTENT: posts grid + detail injection -->
+        <main id="mainContentArea">
+            <div id="postsGridContainer" class="posts-grid"></div>
         </main>
 
-        <!-- RIGHT SIDEBAR -->
+        <!-- SIDEBAR: categories, tags, recent posts, episodes (JSON structured) -->
         <aside>
-            <!-- Sidebar Ad (300x250) - highperformanceformat -->
-            <div class="sidebar-card">
-                <div style="text-align:center; margin-bottom:10px; font-weight:500;">📢 Sponsored</div>
+            <div class="sidebar-widget">
+                <div class="widget-title"><i class="fas fa-tags"></i> Categories</div>
+                <div id="categoryListSidebar" class="category-list"></div>
+            </div>
+
+            <!-- 300x250 ad (highperformanceformat) -->
+            <div class="sidebar-widget" style="text-align:center">
                 <script>
-                    atOptions = {
-                        'key' : '161b32c66b7061b9fe411783a9826d08',
-                        'format' : 'iframe',
-                        'height' : 250,
-                        'width' : 300,
-                        'params' : {}
-                    };
+                    atOptions = { 'key' : '161b32c66b7061b9fe411783a9826d08', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
                 </script>
                 <script src="https://www.highperformanceformat.com/161b32c66b7061b9fe411783a9826d08/invoke.js"></script>
             </div>
 
-            <!-- Trending Dramas -->
-            <div class="sidebar-card">
-                <h3 class="sidebar-title"><i class="fas fa-fire"></i> Trending Dramas</h3>
-                <ul class="trending-list">
-                    <li><span>1</span> Queen of Tears (2024) <span style="margin-left:auto; font-size:12px;">K-Drama</span></li>
-                    <li><span>2</span> The Double (2024) <span style="margin-left:auto; font-size:12px;">C-Drama</span></li>
-                    <li><span>3</span> My Demon (2023) <span style="margin-left:auto; font-size:12px;">K-Drama</span></li>
-                    <li><span>4</span> Love Between Fairy and Devil (2022) <span style="margin-left:auto; font-size:12px;">C-Drama</span></li>
-                </ul>
+            <div class="sidebar-widget">
+                <div class="widget-title">🏷️ Popular Tags</div>
+                <div id="tagCloudSidebar" class="tag-cloud"></div>
             </div>
 
-            <!-- Popular Reviews -->
-            <div class="sidebar-card">
-                <h3 class="sidebar-title"><i class="fas fa-star"></i> Popular Reviews</h3>
-                <ul class="popular-list">
-                    <li><span>1</span> Lovely Runner (2024) <span style="margin-left:auto;">K-Drama</span></li>
-                    <li><span>2</span> Hidden Love (2023) <span style="margin-left:auto;">C-Drama</span></li>
-                    <li><span>3</span> The Glory (2022) <span style="margin-left:auto;">K-Drama</span></li>
-                    <li><span>4</span> Till The End of The Moon (2023) <span style="margin-left:auto;">C-Drama</span></li>
-                </ul>
+            <div class="sidebar-widget">
+                <div class="widget-title">🕒 Recent Posts</div>
+                <ul id="recentPostsList" class="recent-list"></ul>
             </div>
 
-            <!-- AdSense Sidebar (160x600 vertical ad) -->
-            <div class="sidebar-card sidebar-ad">
+            <!-- 160x600 vertical ad -->
+            <div class="sidebar-widget">
                 <script>
-                    atOptions = {
-                        'key' : 'd21254347a10252e33d8a626bde6d038',
-                        'format' : 'iframe',
-                        'height' : 600,
-                        'width' : 160,
-                        'params' : {}
-                    };
+                    atOptions = { 'key' : 'd21254347a10252e33d8a626bde6d038', 'format' : 'iframe', 'height' : 600, 'width' : 160, 'params' : {} };
                 </script>
                 <script src="https://www.highperformanceformat.com/d21254347a10252e33d8a626bde6d038/invoke.js"></script>
             </div>
 
-            <!-- Additional Sidebar Ad (second AdSense unit optional but fits the described 'AdSense Sidebar Ad') -->
-            <div class="sidebar-card">
-                <h3 class="sidebar-title">Support us</h3>
-                <div style="text-align:center;">
-                    <script>
-                        atOptions = {
-                            'key' : '418774810b7044f7e8562952829b70eb',
-                            'format' : 'iframe',
-                            'height' : 90,
-                            'width' : 728,
-                            'params' : {}
-                        };
-                    </script>
-                    <script src="https://www.highperformanceformat.com/418774810b7044f7e8562952829b70eb/invoke.js"></script>
-                </div>
-                <p style="font-size:12px; margin-top:10px; text-align:center;">Your ad supports our drama reviews ❤️</p>
+            <!-- Extra AdSense Sidebar -->
+            <div class="sidebar-widget">
+                <script>
+                    atOptions = { 'key' : '418774810b7044f7e8562952829b70eb', 'format' : 'iframe', 'height' : 90, 'width' : 728, 'params' : {} };
+                </script>
+                <script src="https://www.highperformanceformat.com/418774810b7044f7e8562952829b70eb/invoke.js"></script>
             </div>
         </aside>
     </div>
 
-    <!-- Newsletter Section -->
-    <div class="newsletter">
-        <h3><i class="fas fa-envelope-open-text"></i> Never Miss a Review</h3>
-        <p>Subscribe to get the latest drama reviews and updates in your inbox.</p>
-        <form id="newsletterForm">
-            <input type="email" placeholder="Your Email Address" required id="subEmail">
-            <button type="submit">Subscribe</button>
+    <!-- Admin / Create Post Section -->
+    <div id="adminFormSection" class="admin-panel" style="display: block;">
+        <h3><i class="fas fa-feather-alt"></i> ✨ Create New Drama Post (with episodes & video)</h3>
+        <form id="createPostForm">
+            <div class="form-group"><input type="text" id="postTitle" placeholder="Drama Title *" required></div>
+            <div class="form-group">
+                <select id="postCategory">
+                    <option value="K-Drama">🇰🇷 K-Drama</option>
+                    <option value="C-Drama">🇨🇳 C-Drama</option>
+                    <option value="J-Drama">🇯🇵 J-Drama</option>
+                    <option value="Thai Drama">🇹🇭 Thai Drama</option>
+                </select>
+            </div>
+            <div class="form-group"><input type="text" id="postImageUrl" placeholder="Image URL (poster)"></div>
+            <div class="form-group"><input type="text" id="postVideoUrl" placeholder="Video URL (YouTube embed or trailer link)"></div>
+            <div class="form-group"><textarea id="postContent" rows="3" placeholder="Full review / description..."></textarea></div>
+            <div class="form-group"><input type="text" id="postTags" placeholder="Tags: romance, thriller, comedy (comma separated)"></div>
+            <div class="form-group"><textarea id="postEpisodes" rows="2" placeholder="Episodes list: Episode 1: First love, Episode 2: Reunion | Or each line. Format: 1: Title, 2: Title..."></textarea></div>
+            <button type="submit">🚀 Publish Post</button>
         </form>
-        <small style="display:block; margin-top:12px;">No spam, only drama love 💌</small>
+        <p style="margin-top:12px; font-size:13px;">💡 Pro tip: Add episodes for internal linking. Posts will be saved automatically in your browser (localStorage).</p>
+    </div>
+
+    <!-- hidden detail modal -->
+    <div id="detailModal" class="detail-overlay">
+        <div class="detail-container">
+            <span class="close-detail" id="closeModalBtn">&times;</span>
+            <div id="modalDynamicContent"></div>
+        </div>
     </div>
 </div>
 
-<!-- FOOTER -->
 <footer>
     <div class="container">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>Cute Drama</h4>
-                <p>Drama Reviews & More</p>
-                <p>Your ultimate destination for K-Drama and C-Drama reviews, latest updates, top lists and recommendations.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <a href="#">Home</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Disclaimer</a>
-            </div>
-            <div class="footer-col">
-                <h4>Categories</h4>
-                <a href="#">K-Drama</a>
-                <a href="#">C-Drama</a>
-                <a href="#">Reviews</a>
-                <a href="#">Top List</a>
-                <a href="#">News</a>
-            </div>
+        <div style="display: flex; justify-content: space-between; flex-wrap:wrap;">
+            <div><h3>CPOPZONE</h3><p>Entertainment · Dramas · Episode Guides</p></div>
+            <div><strong>Quick links</strong><br><a style="color:#e7cfb9;" href="#">Home</a> | <a style="color:#e7cfb9;" href="#" id="footerCreateLink">New Post</a></div>
         </div>
-        <div class="copyright">
-            <p>© 2026 Cute Drama. All Rights Reserved.</p>
-            <p>Designed with ❤️ for drama lovers</p>
-        </div>
+        <div style="text-align:center; margin-top:30px;">© 2026 CpopZone — All rights reserved. Designed for drama lovers ❤️</div>
     </div>
 </footer>
 
-<!-- JavaScript for newsletter interactivity & minor SEO improvements -->
 <script>
-    // Newsletter subscription simulation (user-friendly)
-    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        let email = document.getElementById('subEmail').value.trim();
-        if(email && email.includes('@')) {
-            alert('✨ Thank you for subscribing! Stay tuned for amazing drama updates.');
-            document.getElementById('subEmail').value = '';
+    // ---------- DATA MODEL (localStorage) ----------
+    let posts = [];
+
+    function loadPostsFromStorage() {
+        const stored = localStorage.getItem("cpopzone_posts");
+        if(stored) {
+            posts = JSON.parse(stored);
         } else {
-            alert('Please enter a valid email addr
+            // Default demo posts with images, episodes, internal linking ready
+            posts = [
+                { id: Date.now()+1, title: "Lovely Runner (2024)", category: "K-Drama", imageUrl: "https://placehold.co/600x400/fbe9d2/b85c1f?text=Lovely+Runner", videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ", content: "Time-travel romance that blends nostalgia, comedy and emotional depth. A must-watch!", tags: ["romance","time-travel","fantasy"], episodes: [{ep:"1", title:"Fateful Encounter"},{ep:"2", title:"Running Through Time"}] },
+                { id: Date.now()+2, title: "Hidden Love (2023)", category: "C-Drama", imageUrl: "https://placehold.co/600x400/f2e0ce/b45c2c?text=Hidden+Love", videoUrl: "", content: "Sweet coming-of-age romance that makes your heart flutter.", tags: ["romance","youth","sweet"], episodes: [{ep:"1", title:"First Glance"},{ep:"2", title:"Secret Crush"}] },
+                { id: Date.now()+3, title: "Queen of Tears", category: "K-Drama", imageUrl: "https://placehold.co/600x400/ffecd9/b5521e?text=Queen+of+Tears", videoUrl: "", content: "Powerful emotional melodrama with stunning performances.", tags: ["melodrama","family","tears"], episodes: [{ep:"1", title:"Crown of Sorrow"},{ep:"2", title:"Broken Vows"}] }
+            ];
+            savePosts();
+        }
+        renderAll();
+    }
+
+    function savePosts() {
+        localStorage.setItem("cpopzone_posts", JSON.stringify(posts));
+    }
+
+    function addPost(post) {
+        post.id = Date.now();
+        posts.unshift(post);
+        savePosts();
+        renderAll();
+    }
+
+    function deletePost(id) {
+        posts = posts.filter(p => p.id != id);
+        savePosts();
+        renderAll();
+    }
+
+    function renderAll() {
+        renderPostsGrid();
+        renderSidebarCategories();
+        renderTagCloud();
+        renderRecentPosts();
+    }
+
+    function renderPostsGrid() {
+        const container = document.getElementById("postsGridContainer");
+        if(!container) return;
+        if(posts.length === 0) {
+            container.innerHTML = "<div style='grid-column:1/-1; text-align:center;'>No dramas yet. Create your first review! ✨</div>";
+            return;
+        }
+        container.innerHTML = posts.map(post => `
+            <div class="post-card">
+                <div class="card-img"><img src="${post.imageUrl || 'https://placehold.co/600x400/e9d9cb/8b5a2e?text=No+Image'}" alt="${post.title}"></div>
+                <div class="card-body">
+                    <span class="cat-badge">${post.category}</span>
+                    <div class="post-title">${escapeHtml(post.title)}</div>
+                    <div class="post-tags">${post.tags.map(t => `<span class="tag">#${escapeHtml(t)}</span>`).join('')}</div>
+                    <p style="font-size:0.85rem; color:#644a33;">${post.content.substring(0, 100)}...</p>
+                    <button class="btn-detail" onclick="viewPostDetail(${post.id})">📖 Read full review + episodes</button>
+                    <button style="background:#e2d5c8; margin-top:8px; color:#4a2e1a;" onclick="deletePost(${post.id})">🗑 Delete</button>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    function viewPostDetail(id) {
+        const post = posts.find(p => p.id == id);
+        if(!post) return;
+        // find related posts by tags (internal linking)
+        const related = posts.filter(p => p.id !== id && p.tags.some(tag => post.tags.includes(tag))).slice(0,3);
+        const episodesHtml = post.episodes && post.episodes.length ? 
+            `<div class="episode-list"><strong>📺 Episode Guide (Internal linking):</strong><ul>${post.episodes.map(ep => `<li class="episode-item">🎬 ${ep.ep}. ${ep.title}</li>`).join('')}</ul></div>` : 
+            `<div class="episode-list">✨ No episodes added yet. Use create form to add episodes.</div>`;
+        const videoEmbed = post.videoUrl ? `<div style="margin:16px 0;"><iframe width="100%" height="250" src="${post.videoUrl.includes('youtube') ? post.videoUrl : post.videoUrl}" frameborder="0" allowfullscreen></iframe></div>` : '';
+        
+        const relatedHtml = related.length ? `<div style="margin-top:20px;"><strong>🔗 Similar Dramas (internal linking)</strong><div class="posts-grid" style="grid-template-columns:1fr 1fr; gap:12px;">${related.map(r => `<div style="background:#f9efe5; padding:12px; border-radius:24px;"><b>${r.title}</b><button class="btn-detail" style="margin-top:6px;" onclick="viewPostDetail(${r.id}); document.getElementById('detailModal').style.visibility='hidden'; setTimeout(()=>viewPostDetail(${r.id}),100);">View</button></div>`).join('')}</div></div>` : '';
+        
+        document.getElementById("modalDynamicContent").innerHTML = `
+            <h2 style="font-size:1.8rem;">${escapeH
