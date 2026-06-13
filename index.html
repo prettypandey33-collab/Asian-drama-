@@ -1,28 +1,552 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="K-Drama और C-Drama के बेहतरीन रिव्यूज और अपडेट्स।">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cute Drama - Drama Reviews & More</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Cute Drama | Honest K-Drama & C-Drama Reviews, Latest Updates & Recommendations</title>
+    <meta name="description" content="Your ultimate destination for K-Drama and C-Drama reviews, latest updates, top lists, and honest recommendations. Read reviews of Lovely Runner, Hidden Love, Joy of Life and more.">
+    <meta name="keywords" content="K-Drama reviews, C-Drama reviews, Lovely Runner, Hidden Love, Joy of Life, Queen of Tears, The Double, drama recommendations">
+    <meta name="author" content="Cute Drama">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.cutedrama.com/">
+    <meta property="og:title" content="Cute Drama – Drama Reviews & More">
+    <meta property="og:description" content="Honest reviews, latest updates & top drama recommendations for K-Drama & C-Drama lovers.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.cutedrama.com/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Monetag meta tag (provided) -->
+    <meta name="monetag" content="108d8db24e0e226aa3ccf7171323173b">
+    
+    <!-- Google Fonts & Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
-        body { font-family: sans-serif; background-color: #121212; color: #ffffff; text-align: center; padding: 20px; }
-        .post-card { background: #1e1e1e; padding: 20px; margin: 10px auto; max-width: 600px; border-radius: 10px; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fef7f0;
+            color: #2c241a;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* header */
+        .site-header {
+            background: linear-gradient(135deg, #fff1e6 0%, #ffe6d5 100%);
+            padding: 2rem 0 1.5rem;
+            border-bottom: 1px solid #ffdbc4;
+            text-align: center;
+        }
+
+        .logo h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #e85d04, #ff9500);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .logo p {
+            font-size: 1rem;
+            color: #b45f2b;
+            font-weight: 500;
+        }
+
+        .hero {
+            text-align: center;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #331e0f;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #5e3a22;
+            margin-top: 0.5rem;
+        }
+
+        .btn-explore {
+            display: inline-block;
+            margin-top: 1.2rem;
+            background: #ff8c42;
+            color: white;
+            font-weight: 600;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: 0.2s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .btn-explore:hover {
+            background: #e56b1a;
+            transform: translateY(-2px);
+        }
+
+        /* ad banner top */
+        .ad-banner {
+            background: #fff;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 20px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            border: 1px solid #ffe0cc;
+        }
+
+        /* two column layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 40px;
+            margin: 2rem 0;
+        }
+
+        /* cards */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            border-left: 6px solid #ff8c42;
+            padding-left: 16px;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            transition: 0.2s;
+            border: 1px solid #ffe1ce;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .drama-tag {
+            display: inline-block;
+            background: #ffedd5;
+            color: #b45f2b;
+            font-weight: 600;
+            font-size: 0.75rem;
+            padding: 4px 12px;
+            border-radius: 30px;
+            margin-bottom: 12px;
+        }
+
+        .card-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .meta {
+            color: #8b6b4d;
+            font-size: 0.85rem;
+            margin: 12px 0;
+            display: flex;
+            gap: 16px;
+        }
+
+        .read-more {
+            color: #ff8c42;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        /* incontent ad */
+        .incontent-ad {
+            background: #fcf7f0;
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0 32px;
+            border-radius: 28px;
+            border: 1px dashed #ffbc7a;
+        }
+
+        /* sidebar */
+        .sidebar-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.4rem;
+            margin-bottom: 2rem;
+            border: 1px solid #ffe0cc;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+        }
+
+        .sidebar-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #ffc489;
+        }
+
+        .trending-list, .popular-list {
+            list-style: none;
+        }
+
+        .trending-list li, .popular-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #fff0e4;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        .trending-list li span:first-child, .popular-list li span:first-child {
+            background: #ffedd5;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            font-weight: bold;
+            color: #c1661b;
+        }
+
+        .sidebar-ad {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* footer & newsletter */
+        .newsletter {
+            background: #ffefdd;
+            border-radius: 40px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .newsletter input {
+            padding: 12px 18px;
+            border-radius: 60px;
+            border: none;
+            width: 260px;
+            max-width: 70%;
+            font-size: 1rem;
+            margin-right: 10px;
+            background: white;
+        }
+
+        .newsletter button {
+            background: #ff8c42;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 60px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #2c241a;
+            color: #f4e3d3;
+            padding: 2.5rem 0 1.5rem;
+            border-radius: 30px 30px 0 0;
+            margin-top: 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col a {
+            color: #e0c8b0;
+            text-decoration: none;
+            display: block;
+            margin: 6px 0;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            border-top: 1px solid #4a3728;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 860px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .logo h1 {
+                font-size: 2rem;
+            }
+        }
+
+        img[alt*="Lovely Runner"], img[alt*="Hidden Love"], img[alt*="Joy of Life"] {
+            background: #f0e2d4;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to Cute Drama</h1>
-    <p>यहाँ आपको मिलेंगे ड्रामा के लेटेस्ट रिव्यूज!</p>
+<header class="site-header">
+    <div class="container">
+        <div class="logo">
+            <h1>🐻 Cute Drama</h1>
+            <p>Drama Reviews & More</p>
+        </div>
+        <div class="hero">
+            <h2>Your Ultimate Destination For K-Drama & C-Drama Reviews</h2>
+            <p>Honest Reviews, Latest Updates & Top Drama Recommendations</p>
+            <a href="#" class="btn-explore">Explore Now →</a>
+        </div>
+    </div>
+</header>
 
-    <div style="margin: 20px 0;">
-        <script src="https://pl29453348.effectivecpmnetwork.com/4c/26/6b/4c266b080c0afe8d1dcd7cf6dd3d0746.js"></script>
+<div class="container">
+    <!-- Responsive AdSense Banner area (EffectiveCPM) -->
+    <div class="ad-banner">
+        <script async="async" data-cfasync="false" src="https://pl29453347.effectivecpmnetwork.com/618d39e8700d3783061510debc2a67ec/invoke.js"></script>
+        <div id="container-618d39e8700d3783061510debc2a67ec"></div>
     </div>
 
-    <div class="post-card">
-        <h2>Hidden Love (2023) Review</h2>
-        <p>एक बहुत ही प्यारी और मासूम लव स्टोरी!</p>
+    <div class="main-grid">
+        <!-- LEFT COLUMN: Latest Reviews -->
+        <main>
+            <h2 class="section-title">📺 Latest Reviews</h2>
+            
+            <!-- K-DRAMA Card 1: Lovely Runner (with exact same image reference, unchanged) -->
+            <article class="review-card">
+                <div class="card-img">
+                    <img src="images/lovely-runner.jpg" alt="Lovely Runner (2024) K-Drama poster" onerror="this.onerror=null; this.src='https://placehold.co/600x400/ffe6d5/ab6f42?text=Lovely+Runner+Poster';">
+                </div>
+                <div class="card-content">
+                    <span class="drama-tag">🇰🇷 K-DRAMA</span>
+                    <h3>Lovely Runner (2024) – Best Time Travel Romance K-Drama?</h3>
+                    <p>Lovely Runner is a heartwarming time travel romance drama that brings laughter, tears, and nostalgia...</p>
+                    <div class="meta">
+                        <span><i class="far fa-calendar-alt"></i> 📅 May 12, 2024</span>
+                        <span><i class="far fa-comment"></i> 📄 12 Comments</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- C-DRAMA Card 2: Hidden Love -->
+            <article class="review-card">
+                <div class="card-img">
+                    <img src="images/hidden-love.jpg" alt="Hidden Love (2023) C-Drama poster" onerror="this.onerror=null; this.src='https://placehold.co/600x400/fdebd0/b45f2b?text=Hidden+Love+Poster';">
+                </div>
+                <div class="card-content">
+                    <span class="drama-tag">🇨🇳 C-DRAMA</span>
+                    <h3>Hidden Love (2023) – A Sweetest Love Story You'll Adore</h3>
+                    <p>Hidden Love is a beautiful coming-of-age romance that will make your heart melt with every episode...</p>
+                    <div class="meta">
+                        <span><i class="far fa-calendar-alt"></i> 📅 May 10, 2024</span>
+                        <span><i class="far fa-comment"></i> 📄 8 Comments</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+
+            <!-- In-Content AdSense Area (468x60 ad) using provided script -->
+            <div class="incontent-ad">
+                <div style="margin-bottom: 6px; font-size:12px; color:#b87a4a;">Advertisement</div>
+                <script>
+                    atOptions = {
+                        'key' : 'a2b41f94bc456c992ffed214e85bd03e',
+                        'format' : 'iframe',
+                        'height' : 60,
+                        'width' : 468,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/a2b41f94bc456c992ffed214e85bd03e/invoke.js"></script>
+            </div>
+
+            <!-- C-DRAMA Card 3: Joy of Life Season 2 -->
+            <article class="review-card">
+                <div class="card-img">
+                    <img src="images/joy-of-life-season2.jpg" alt="Joy of Life Season 2 (2024) C-Drama poster" onerror="this.onerror=null; this.src='https://placehold.co/600x400/ffefdf/aa6f40?text=Joy+of+Life+S2+Poster';">
+                </div>
+                <div class="card-content">
+                    <span class="drama-tag">🇨🇳 C-DRAMA</span>
+                    <h3>Joy of Life Season 2 (2024) – Worth The Wait?</h3>
+                    <p>After a long wait, Joy of Life Season 2 is finally here! Here’s our full review with all the details...</p>
+                    <div class="meta">
+                        <span><i class="far fa-calendar-alt"></i> 📅 May 8, 2024</span>
+                        <span><i class="far fa-comment"></i> 📄 15 Comments</span>
+                    </div>
+                    <a href="#" class="read-more">Read More →</a>
+                </div>
+            </article>
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside>
+            <!-- Sidebar Ad (300x250) - highperformanceformat -->
+            <div class="sidebar-card">
+                <div style="text-align:center; margin-bottom:10px; font-weight:500;">📢 Sponsored</div>
+                <script>
+                    atOptions = {
+                        'key' : '161b32c66b7061b9fe411783a9826d08',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/161b32c66b7061b9fe411783a9826d08/invoke.js"></script>
+            </div>
+
+            <!-- Trending Dramas -->
+            <div class="sidebar-card">
+                <h3 class="sidebar-title"><i class="fas fa-fire"></i> Trending Dramas</h3>
+                <ul class="trending-list">
+                    <li><span>1</span> Queen of Tears (2024) <span style="margin-left:auto; font-size:12px;">K-Drama</span></li>
+                    <li><span>2</span> The Double (2024) <span style="margin-left:auto; font-size:12px;">C-Drama</span></li>
+                    <li><span>3</span> My Demon (2023) <span style="margin-left:auto; font-size:12px;">K-Drama</span></li>
+                    <li><span>4</span> Love Between Fairy and Devil (2022) <span style="margin-left:auto; font-size:12px;">C-Drama</span></li>
+                </ul>
+            </div>
+
+            <!-- Popular Reviews -->
+            <div class="sidebar-card">
+                <h3 class="sidebar-title"><i class="fas fa-star"></i> Popular Reviews</h3>
+                <ul class="popular-list">
+                    <li><span>1</span> Lovely Runner (2024) <span style="margin-left:auto;">K-Drama</span></li>
+                    <li><span>2</span> Hidden Love (2023) <span style="margin-left:auto;">C-Drama</span></li>
+                    <li><span>3</span> The Glory (2022) <span style="margin-left:auto;">K-Drama</span></li>
+                    <li><span>4</span> Till The End of The Moon (2023) <span style="margin-left:auto;">C-Drama</span></li>
+                </ul>
+            </div>
+
+            <!-- AdSense Sidebar (160x600 vertical ad) -->
+            <div class="sidebar-card sidebar-ad">
+                <script>
+                    atOptions = {
+                        'key' : 'd21254347a10252e33d8a626bde6d038',
+                        'format' : 'iframe',
+                        'height' : 600,
+                        'width' : 160,
+                        'params' : {}
+                    };
+                </script>
+                <script src="https://www.highperformanceformat.com/d21254347a10252e33d8a626bde6d038/invoke.js"></script>
+            </div>
+
+            <!-- Additional Sidebar Ad (second AdSense unit optional but fits the described 'AdSense Sidebar Ad') -->
+            <div class="sidebar-card">
+                <h3 class="sidebar-title">Support us</h3>
+                <div style="text-align:center;">
+                    <script>
+                        atOptions = {
+                            'key' : '418774810b7044f7e8562952829b70eb',
+                            'format' : 'iframe',
+                            'height' : 90,
+                            'width' : 728,
+                            'params' : {}
+                        };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/418774810b7044f7e8562952829b70eb/invoke.js"></script>
+                </div>
+                <p style="font-size:12px; margin-top:10px; text-align:center;">Your ad supports our drama reviews ❤️</p>
+            </div>
+        </aside>
     </div>
 
-</body>
-</html>
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+        <h3><i class="fas fa-envelope-open-text"></i> Never Miss a Review</h3>
+        <p>Subscribe to get the latest drama reviews and updates in your inbox.</p>
+        <form id="newsletterForm">
+            <input type="email" placeholder="Your Email Address" required id="subEmail">
+            <button type="submit">Subscribe</button>
+        </form>
+        <small style="display:block; margin-top:12px;">No spam, only drama love 💌</small>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Cute Drama</h4>
+                <p>Drama Reviews & More</p>
+                <p>Your ultimate destination for K-Drama and C-Drama reviews, latest updates, top lists and recommendations.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Disclaimer</a>
+            </div>
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <a href="#">K-Drama</a>
+                <a href="#">C-Drama</a>
+                <a href="#">Reviews</a>
+                <a href="#">Top List</a>
+                <a href="#">News</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2026 Cute Drama. All Rights Reserved.</p>
+            <p>Designed with ❤️ for drama lovers</p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript for newsletter interactivity & minor SEO improvements -->
+<script>
+    // Newsletter subscription simulation (user-friendly)
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        let email = document.getElementById('subEmail').value.trim();
+        if(email && email.includes('@')) {
+            alert('✨ Thank you for subscribing! Stay tuned for amazing drama updates.');
+            document.getElementById('subEmail').value = '';
+        } else {
+            alert('Please enter a valid email addr
